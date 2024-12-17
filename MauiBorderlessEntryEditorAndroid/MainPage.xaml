@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MauiBorderlessEntryEditorAndroid.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:MauiBorderlessEntryEditorAndroid.Controls"
+    Shell.NavBarIsVisible="False">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="10,0" Spacing="20">
+            <Image
+                Aspect="AspectFit"
+                HeightRequest="100"
+                SemanticProperties.Description="dot net bot in a race car number eight"
+                Source="dotnet_bot.png" />
+
+            <Label
+                FontSize="18"
+                HorizontalOptions="Center"
+                Text="Fix Entry/Editor Border on Android" />
+
+            <Border Padding="5" StrokeShape="Rectangle">
+                <VerticalStackLayout Spacing="4">
+                    <Label Text="Entry" />
+                    <controls:BorderlessEntry x:Name="entry" Placeholder="Entry something in this entry..." />
+                </VerticalStackLayout>
+            </Border>
+
+            <Border Padding="5" StrokeShape="Rectangle">
+                <VerticalStackLayout Spacing="4">
+                    <Label Text="Editor" />
+                    <controls:BorderlessEditor
+                        BackgroundColor="LightGreen"
+                        HeightRequest="150"
+                        Placeholder="Entry something in this editor..." />
+                </VerticalStackLayout>
+            </Border>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
